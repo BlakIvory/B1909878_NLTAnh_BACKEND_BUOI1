@@ -1,15 +1,18 @@
-const express = require("express")
+const express = require("express");
 
-const cors = require("cors")
+const cors = require("cors");
 
-const app = express()
+const contactsRouter = require("./app/routers/contact.route");
 
-app.use(cors())
-app.use(express.json())
+const app = express();
 
-app.get("/",(req,res)=>{
-  res.json({ message : "Wellcome to connect book application. "})  
-})
+app.use(cors());
+app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({ message: "Wellcome to connect book application. " });
+});
+
+app.use("/api/contacts", contactsRouter);
 
 module.exports = app;
