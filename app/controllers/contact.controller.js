@@ -2,10 +2,10 @@ exports.create = (req, res) => {
   res.send({ message: "create handle" });
 };
 exports.findAll = (req, res) => {
-  res.send({ message: 'findAll handle' });
+  res.send({ message: "findAll handle"});
 };
 exports.findOne = (req, res) => {
-  res.send({ message: 'findOne handle '});
+  res.send({ message: "findOne handle"});
 };
 exports.update = (req, res) => {
   res.send({ message: "update handle" });
